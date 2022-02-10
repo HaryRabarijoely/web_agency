@@ -6,6 +6,7 @@ import About from './pages/About';
 import Works from './pages/Works';
 import Navbar from './components/Navbar';
 import ThemeContext from './ThemeContext';
+import StudyCase from './components/StudyCase';
 //import Theme from './Theme';
 
 const App = () => {
@@ -30,25 +31,25 @@ const App = () => {
                 (currentTheme === 'light') ? setCurrentTheme('dark') : setCurrentTheme('light');
             }
         }}>{
+               
             <Router>                
-                
-                <main className={`App ${currentTheme}`}>
+                    
+                <main className={`App ${currentTheme}`}>                        
                     <Navbar />
                     <div className="container">
                         <Routes>
-                            <Route path="/" element={<Home />} />
-                                
-                            
-                            <Route path="/About" element={<About />} />
-                                
-                            
+                            <Route path="/" element={<Home />} />                                  
+                                    
+                            <Route path="/About" element={<About />} />                                    
+                                    
                             <Route path="/Works" element={<Works />} />
-                                
-                            
+                                <Route path="/Works/:workSlug" element={<StudyCase />} />                                
                         </Routes>
-                    </div>
+                    </div>                        
                 </main>
-            </Router>
+                    
+             </Router>
+            
             }
         </ThemeContext.Provider>
     );
