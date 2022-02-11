@@ -14,7 +14,7 @@ const ToggleButton = () => {
     */
     
     return (
-        <button onClick={theme.toggleTheme}>{mode}</button>
+        <button  onClick={theme.toggleTheme}>{mode}</button>
     );
 };
 
