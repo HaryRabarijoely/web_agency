@@ -59,7 +59,7 @@ button {
   float: right;
   height: 30px;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   z-index: 1;
   &:hover {
     cursor: pointer;
@@ -79,4 +79,35 @@ button {
     text-align: justify;
     line-height: 2rem;
   }
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 50px;
+  font-weight: bold;
+  font-size: 150%;
+}
+
+.link:hover {
+  color: rgb(233, 17, 17);
+}
+
+.links {
+  color: #3366cc;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 100%;
+  margin-right: 5px;
+}
+
+.links:hover {
+  color: rgb(255, 255, 255);
+}
+
+nav {
+  background-color: rgb(216, 130, 2);
+  padding: 10px;
+  text-align: justify;
+  border-radius: 0px;
 }

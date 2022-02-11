@@ -31,25 +31,25 @@ const App = () => {
                 (currentTheme === 'light') ? setCurrentTheme('dark') : setCurrentTheme('light');
             }
         }}>{
-               
-            <Router>                
-                    
-                <main className={`App ${currentTheme}`}>                        
-                    <Navbar />
-                    <div className="container">
-                        <Routes>
-                            <Route path="/" element={<Home />} />                                  
-                                    
-                            <Route path="/About" element={<About />} />                                    
-                                    
-                            <Route path="/Works" element={<Works />} />
-                                <Route path="/Works/:workSlug" element={<StudyCase />} />                                
-                        </Routes>
-                    </div>                        
-                </main>
-                    
-             </Router>
-            
+            <div>   
+                <Router>                
+                        
+                    <main className={`App ${currentTheme}`}>                        
+                        <Navbar />
+                        
+                            <Routes>
+                                <Route path="/" element={<Home />} />                                  
+                                        
+                                <Route path="/About" element={<About />} />                                    
+                                        
+                                <Route path="/Works" element={<Works />} />
+                                    <Route path="/Works/:workSlug" element={<StudyCase />} />                                
+                            </Routes>
+                                                
+                    </main>
+                        
+                </Router>
+            </div>
             }
         </ThemeContext.Provider>
     );

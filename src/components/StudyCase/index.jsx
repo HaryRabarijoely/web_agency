@@ -11,13 +11,32 @@ const StudyCase = () => {
     const foundWork = works.find((work) => workSlug.includes(work.slug));
     setCurrentWork(foundWork);
   }, [workSlug]);
-  if (currentWork) {
+
+  return (
+    <div id="main">
+
+      {works.reduce((work, i) => {
+        if (currentWork !== undefined ) {
+        return (
+          <div key={i} style={{textAlign: 'center'}}className="work">
+            <>
+              <h3>{currentWork.title}</h3>
+
+              <br /> {currentWork.description}
+            </>
+          </div>
+        )};
+      })}
+    </div>
+  )
+
+  /*if (currentWork) {
     return (
-      <div id="main">        
+      <div style={{textAlign: 'center'}}className="work">        
               
           <h3 style={{paddingTop:'50px'}}>{currentWork.title}</h3>
 
-          <p>{currentWork.description}</p>              
+          <br />{currentWork.description}              
             
       </div>  
     )
@@ -26,7 +45,7 @@ const StudyCase = () => {
     return (
       <p>Il n'y a rien a voir ici!</p>
     );
-  };
+  };*/
   
 };
 
